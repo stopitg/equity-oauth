@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy · Equity local Import</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Privacy policy</h1>
+  <p class="meta">Equity local Import · Last updated 2 November 2026</p>
+
+  <p>Equity local Import is a personal command-line tool that its owner runs on their own computer.
+  This policy explains what Google user data it accesses, how it uses and stores that data, and how
+  to remove its access.</p>
+
+  <h2>Data it accesses</h2>
+  <ul>
+    <li>It requests a single Google permission, <code>drive.file</code>
+    (<code>https://www.googleapis.com/auth/drive.file</code>). That gives it access only to the
+    spreadsheets you choose in Google's file picker when you sign in.</li>
+    <li>It reads and writes the cells, formatting and named ranges of those chosen spreadsheets
+    through the Google Sheets API.</li>
+    <li>It doesn't access any other file, your email, contacts, calendar or profile.</li>
+  </ul>
+
+  <h2>How it uses the data</h2>
+  <p>It uses the chosen spreadsheets only to do what you ask: it reads them to decide what to update,
+  and it writes public financial data from the SEC's EDGAR system into them. It doesn't use Google
+  user data for advertising, it doesn't sell it, and it doesn't use it to train AI or machine-learning
+  models.</p>
+
+  <h2>Where the data is stored</h2>
+  <ul>
+    <li>The program runs only on your own computer. There is no server, and it doesn't send Google
+    user data to the developer or to any third party. Its only network destinations are Google's own
+    sign-in and Sheets services and the SEC's public EDGAR site, which receives no Google data.</li>
+    <li>After sign-in, it saves one item on your computer: a Google refresh token, in a file readable
+    only by your user account. Access tokens are kept in memory only while the program runs.</li>
+    <li>Spreadsheet contents stay in your Google Drive. The program keeps no copy after it finishes.</li>
+  </ul>
+
+  <h2>Sharing</h2>
+  <p>Google user data is not shared with, sold to or transferred to anyone. The use and transfer of
+  information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+  User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Removing access and deleting data</h2>
+  <ul>
+    <li>Revoke the program's access at any time at
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>The program's own revoke command revokes the token with Google and then deletes the saved
+    token file. Deleting that file yourself also removes the stored token from your computer.</li>
+  </ul>
+
+  <h2>Changes and contact</h2>
+  <p>Changes to this policy will be posted on this page with a new date. Questions can be raised as
+  an issue on this site's
+  <a href="https://github.com/stopitg/equity-oauth">GitHub repository</a>.</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="terms.html">Terms of service</a>
+  </nav>
+</main>
+</body>
+</html>
